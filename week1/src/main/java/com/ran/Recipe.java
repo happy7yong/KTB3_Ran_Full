@@ -4,10 +4,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Recipe {
-    String name; //만들어진 음식
-    Set<String> requireIngredients;
+    private final String name; //만들어진 음식
+    private final Set<String> requireIngredients;
 
-    Recipe(String name, Set<String> requireIngredients) {
+    public Recipe(String name, Set<String> requireIngredients) {
         this.name = name;
         this.requireIngredients = requireIngredients;
     }
