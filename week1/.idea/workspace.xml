@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a819457a-33f3-4a8f-8c71-dff8d042dd6f" name="Changes" comment="feat : 문서 변경" />
+    <list default="true" id="a819457a-33f3-4a8f-8c71-dff8d042dd6f" name="Changes" comment="feat : name, 레시피는 불변 및 private으로 변경">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ran/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ran/Recipe.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,7 +147,7 @@
       <workItem from="1757683012492" duration="5488000" />
       <workItem from="1757827501237" duration="6298000" />
       <workItem from="1757834016430" duration="86000" />
-      <workItem from="1757834112486" duration="21743000" />
+      <workItem from="1757834112486" duration="23704000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -249,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757856664984</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="feat : name, 레시피는 불변 및 private으로 변경">
+      <option name="closed" value="true" />
+      <created>1757856791373</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1757856791373</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +291,7 @@
     <MESSAGE value="feat : 2차 상속 - 카테고리 추가" />
     <MESSAGE value="feat : 리펙토링" />
     <MESSAGE value="feat : 문서 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : 문서 변경" />
+    <MESSAGE value="feat : name, 레시피는 불변 및 private으로 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : name, 레시피는 불변 및 private으로 변경" />
   </component>
 </project>

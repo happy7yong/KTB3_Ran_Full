@@ -28,7 +28,6 @@ class EggRecipe extends Recipe {
         super(name, requireIngredients);
     }
 
-    // 달걀 요리에만 해당되는 공통 기능
     void crackEgg() {
         System.out.println("계란을 톡! 깨뜨립니다.");
     }
@@ -45,13 +44,14 @@ class BreadRecipe extends Recipe {
     }
 }
 
+//볶음밥
 class FriedRiceRecipe extends Recipe {
     FriedRiceRecipe(String name, Set<String> requireIngredients) {
         super(name, requireIngredients);
     }
 
     void stirFry() {
-        System.out.println("프라이팬에서 재료를 볶습니다...");
+        System.out.println("프라이팬에서 재료를 볶습니다.");
     }
 }
 
