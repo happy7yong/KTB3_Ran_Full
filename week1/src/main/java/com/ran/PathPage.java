@@ -1,6 +1,7 @@
 package com.ran;
 
 import java.util.ArrayList;
+import java.util.Set;
 import java.util.Stack;
 
 import static com.ran.Components.*;
@@ -19,9 +20,7 @@ public class PathPage {
             case 3:
                 pathStack.push("cookware");
                 break;
-            default://제출하기
-                pathStack.push("foodSubmitPage");
-                break;
+            default:
         }
     }
     //뒤로가기 선택 시 해당 페이지 스택에서 삭제
@@ -37,7 +36,7 @@ public class PathPage {
     }
 
     //페이지 라우터
-    public static void pageRouter(Stack<String> pageStack, ArrayList<String> currentIngredient){
+    public static void pageRouter(Stack<String> pageStack, Set<String> currentIngredient){
         if(getCurrentPath(pageStack).equals("actionPage")){
             numberShow(Action);
             currentCookIngreShow(currentIngredient);
@@ -61,8 +60,5 @@ public class PathPage {
             currentCookIngreShow(currentIngredient);
         }
 
-        if(getCurrentPath(pageStack).equals("foodSubmitPage")){
-            Recipe.cook();
-        }
     }
 }
