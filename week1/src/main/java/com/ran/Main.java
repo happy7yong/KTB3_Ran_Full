@@ -1,66 +1,13 @@
 package com.ran;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Stack;
 
+import static com.ran.Main.ingredient.isValidation;
+import static com.ran.PathPage.*;
+
 public class Main {
-
-    interface showSelection{
-        void numberShow(String[] items);
-        void numberlessShow(String[] items);
-        void caseNumber(int selectNumber);
-    }
-
-
-    //선택시 생성 템플릿 컴포넌트 클래스
-    public static class Selection implements showSelection{
-        @Override
-        public void numberShow(String[] items) {
-            for(int Number=0;Number<items.length;Number++){
-                System.out.println(Number+1 +". "+ items[Number]);
-            }
-            backShow(items); //뒤로가기
-        }
-
-        @Override
-        public void numberlessShow(String[] items){
-            for (String item : items) {
-                System.out.println(item);
-            }
-            backShow(items); //뒤로가기
-        }
-
-        public void backShow(String[] items){
-            if(items != ingredient.Action){
-                System.out.println("-> 뒤로가기");
-            }
-        }
-
-        public void currentCookIngreShow(String[] items){
-            System.out.println("현재 선택한 재료 :");
-            for(String item : items){
-                System.out.println(item);
-            }
-        }
-
-        @Override
-        public void caseNumber(int selectNumber){
-            Selection print = new Selection();
-            switch(selectNumber){
-                case 1:
-                    print.numberlessShow(ingredient.refrigerator);
-                    break;
-                case 2:
-                    print.numberlessShow(ingredient.condiments);
-                    break;
-                case 3:
-                    print.numberlessShow(ingredient.cookware);
-                    break;
-                default://제출하기
-                    break;
-            }
-        }
-    }
 
     public static class ingredient{
         static String[] Action = {"냉장고 열기", "선반 열기", "요리도구 사용하기", "제출하기"};
@@ -68,45 +15,66 @@ public class Main {
         static String[] condiments = {"소금", "설탕", "간장", "고춧가루", "밀가루"};
         static String[] cookware = {"후라이팬", "냄비", "전자레인지", "오븐"};
 
-        //뒤로가기 존재
+        static String[][] component = {Action, refrigerator, condiments, cookware};
 
-        //각 재료 선택시 스택 저장
-        public void selectIngredient(int selectNumber){
+        //유효성 검사
+        public static boolean isValidation(String item){
+            for(int row=0;row<component.length;row++){
+                for(int col=0;col<component[row].length;col++){
+                    if(component[row][col].equals(item)){
+                        return true;
+                    }
+                }
+            }
 
+            return false;
         }
-        //레시피d
 
+        //레시피
     }
 
 
 
     public static void main(String[] args) {
         Stack<String> pathStack = new Stack<>();
-        Stack<String> currentCookIngre = new Stack<>();
+        ArrayList<String> currentIngredient = new ArrayList<>();//현재 저장된 재료
 
-        showSelection print = new Selection(); //print의 객체 생성
         Scanner sc = new Scanner(System.in); //입력 변수 생성
-        ingredient ingredient = new ingredient();
 
         System.out.println("냉장고를 부탁해 !");
+        pathStack.push("actionPage");//Actionpage위치저장
 
-        System.out.println("어떤 행동을 할까?");
-        print.numberShow(ingredient.Action);
-        pathStack.push("Action");
+        while(true){
+            System.out.println("======================");
+            //actionPage
+            System.out.println("어떤 행동을 할까?");
+            pageRouter(pathStack,currentIngredient);
 
-        int selectNumber = sc.nextInt(); //선택한 넘버 저장
+            int selectNumber = sc.nextInt(); //input으로 number 받음
+            sc.nextLine();
 
-        boolean isCase = true;
-        while (isCase){
-            print.caseNumber(selectNumber);
-            String selectIngre = sc.nextLine(); //어떻게 저장되어야하지?
-            currentCookIngre.push(selectIngre);
+            caseNumber(selectNumber,pathStack);
+
+            //재료 선택 화면
+            while (!getCurrentPath(pathStack).equals("actionPage") || !getCurrentPath(pathStack).equals("foodSubmitPage")) {
+                pageRouter(pathStack,currentIngredient);
+                String selectIngre = sc.nextLine(); //개행 추가
+
+                //뒤로가기 유효성 검사
+                pathEnter(pathStack, selectIngre);
+                if(getCurrentPath(pathStack).equals("actionPage")){
+                    break;
+                }
+
+                //유효성 검사
+                if(isValidation(selectIngre)){
+                    currentIngredient.add(selectIngre);
+                }else{
+                    System.out.println("!! 재료가 존재하지 않습니다. 다시 작성해주세요.");
+                }
+            }
+
         }
-        currentCookIngre.push("ingredient");
-
-        selectNumber = sc.nextInt(); //선택한 넘버 저장
-        ingredient.selectIngredient(selectNumber);
-
 
     }
 }
