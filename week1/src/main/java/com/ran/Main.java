@@ -95,8 +95,7 @@ public class Main {
             } else if(currentIngredient.isEmpty()){
                 System.out.println("재료가 비어있습니다.");
                 break;
-            }
-            else {
+            } else {
                 System.out.println("음식 취향이 독특시군요! 형체를 알아볼 수 없는 음식은 처음이에요!");
                 break;
             }
