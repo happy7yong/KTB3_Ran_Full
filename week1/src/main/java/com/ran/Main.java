@@ -28,7 +28,6 @@ public class Main {
             return false;
         }
 
-        //레시피
     }
 
 
@@ -86,11 +85,9 @@ public class Main {
         );
 
         // 검사
-        boolean Cook = false;
         for(Recipe recipe : recipes){
             if (recipe.containsIngredient(currentIngredient)) {
                 recipe.cook();
-                Cook = true;
                 break;
             } else if(currentIngredient.isEmpty()){
                 System.out.println("재료가 비어있습니다.");
