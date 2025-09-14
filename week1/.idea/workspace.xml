@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a819457a-33f3-4a8f-8c71-dff8d042dd6f" name="Changes" comment="feat : Router 페이지 생성">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="a819457a-33f3-4a8f-8c71-dff8d042dd6f" name="Changes" comment="feat : 문서 변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ran/Components.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ran/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/PathPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ran/PathPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ran/Recipe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +147,7 @@
       <workItem from="1757683012492" duration="5488000" />
       <workItem from="1757827501237" duration="6298000" />
       <workItem from="1757834016430" duration="86000" />
-      <workItem from="1757834112486" duration="18455000" />
+      <workItem from="1757834112486" duration="21345000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -192,7 +189,47 @@
       <option name="project" value="LOCAL" />
       <updated>1757849289378</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat : ArrayList -&gt; Set으로 자료형 변경">
+      <option name="closed" value="true" />
+      <created>1757853079565</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1757853079565</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat : 첫페이지에서 1-3이 아닌 다른 선택지를 선택했을 경우의 예외처리">
+      <option name="closed" value="true" />
+      <created>1757853109330</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1757853109330</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat : 레시피 제출">
+      <option name="closed" value="true" />
+      <created>1757853125852</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1757853125852</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat : containAll이 아닌 equals 모두 포함의 경우로 작성">
+      <option name="closed" value="true" />
+      <created>1757853152116</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1757853152116</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat : 문서 변경">
+      <option name="closed" value="true" />
+      <created>1757853160605</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1757853160605</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +252,11 @@
     <MESSAGE value="feat : 가장 기초 템플릿 컴포넌트 생성" />
     <MESSAGE value="feat : 레시피 제외 전체 프로세스 제어 페이지" />
     <MESSAGE value="feat : Router 페이지 생성" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : Router 페이지 생성" />
+    <MESSAGE value="feat : ArrayList -&gt; Set으로 자료형 변경" />
+    <MESSAGE value="feat : 첫페이지에서 1-3이 아닌 다른 선택지를 선택했을 경우의 예외처리" />
+    <MESSAGE value="feat : 레시피 제출" />
+    <MESSAGE value="feat : containAll이 아닌 equals 모두 포함의 경우로 작성" />
+    <MESSAGE value="feat : 문서 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : 문서 변경" />
   </component>
 </project>
