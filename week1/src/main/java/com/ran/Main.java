@@ -1,8 +1,6 @@
 package com.ran;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.*;
 
 import static com.ran.Main.ingredient.isValidation;
 import static com.ran.PathPage.*;
@@ -37,26 +35,27 @@ public class Main {
 
     public static void main(String[] args) {
         Stack<String> pathStack = new Stack<>();
-        ArrayList<String> currentIngredient = new ArrayList<>();//현재 저장된 재료
+        Set<String> currentIngredient = new HashSet<>();//현재 저장된 재료
 
         Scanner sc = new Scanner(System.in); //입력 변수 생성
 
         System.out.println("냉장고를 부탁해 !");
         pathStack.push("actionPage");//Actionpage위치저장
 
-        while(true){
+        int selectNumber = 0;
+        while(selectNumber != 4){
             System.out.println("======================");
             //actionPage
             System.out.println("어떤 행동을 할까?");
             pageRouter(pathStack,currentIngredient);
 
-            int selectNumber = sc.nextInt(); //input으로 number 받음
+            selectNumber = sc.nextInt(); //input으로 number 받음
             sc.nextLine();
 
             caseNumber(selectNumber,pathStack);
 
             //재료 선택 화면
-            while (!getCurrentPath(pathStack).equals("actionPage") || !getCurrentPath(pathStack).equals("foodSubmitPage")) {
+            while (!getCurrentPath(pathStack).equals("actionPage") && !getCurrentPath(pathStack).equals("foodSubmitPage")) {
                 pageRouter(pathStack,currentIngredient);
                 String selectIngre = sc.nextLine(); //개행 추가
 
@@ -74,6 +73,33 @@ public class Main {
                 }
             }
 
+        }
+
+        List<Recipe> recipes = List.of(
+                new EggFry(),
+                new EggSteam(),
+                new EggSausageRoll(),
+                new PizzaBread(),
+                new Souffle(),
+                new KimchiFriedRice(),
+                new Cake()
+        );
+
+        // 검사
+        boolean Cook = false;
+        for(Recipe recipe : recipes){
+            if (recipe.containsIngredient(currentIngredient)) {
+                recipe.cook();
+                Cook = true;
+                break;
+            } else if(currentIngredient.isEmpty()){
+                System.out.println("재료가 비어있습니다.");
+                break;
+            }
+            else {
+                System.out.println("음식 취향이 독특시군요! 형체를 알아볼 수 없는 음식은 처음이에요!");
+                break;
+            }
         }
 
     }
