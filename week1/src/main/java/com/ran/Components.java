@@ -1,6 +1,7 @@
 package com.ran;
 
 import java.util.ArrayList;
+import java.util.Set;
 
 public class Components {
     public static void numberShow(String[] items) {
@@ -21,7 +22,7 @@ public class Components {
             }
         }
 
-        public static void currentCookIngreShow(ArrayList<String> items){
+        public static void currentCookIngreShow(Set<String> items){
             System.out.print("현재 선택한 재료 :");
             if(!items.isEmpty()){
                 for(String item : items){
