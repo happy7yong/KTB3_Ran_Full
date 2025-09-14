@@ -12,12 +12,12 @@ public class Recipe {
         this.requireIngredients = requireIngredients;
     }
 
-    public Boolean containsIngredient(Set<String> ingredients) {
-        return ingredients.containsAll(requireIngredients);//레시피에 있는 요소들이 모두 포함되어있는지확인
+    public boolean containsIngredient(Set<String> ingredients) {
+        return ingredients.equals(requireIngredients);//레시피에 있는 요소들이 모두 포함되어있는지확인
     }
 
     public void cook(){
-        System.out.println(this.name + "완성!");
+        System.out.println("레시피를 발견했습니다!" + this.name + "가 완성되었습니다!");
     }
 }
 
