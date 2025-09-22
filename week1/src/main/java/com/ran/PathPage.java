@@ -1,11 +1,10 @@
 package com.ran;
 
-import java.util.ArrayList;
-import java.util.Set;
-import java.util.Stack;
+import java.util.*;
 
 import static com.ran.Components.*;
-import static com.ran.Main.ingredient.*;
+import static com.ran.IngredientComponents.*;
+import static com.ran.Main.IngredientMenu.*;
 
 public class PathPage {
 
@@ -36,27 +35,27 @@ public class PathPage {
     }
 
     //페이지 라우터
-    public static void pageRouter(Stack<String> pageStack, Set<String> currentIngredient){
+    public static void pageRouter(Stack<String> pageStack, Queue<Ingredient> currentIngredient){
         if(getCurrentPath(pageStack).equals("actionPage")){
             numberShow(Action);
             currentCookIngreShow(currentIngredient);
         }
 
         if(getCurrentPath(pageStack).equals("refrigeratorPage")){
-            numberlessShow(refrigerator);
-            backShow(refrigerator);
+            numberlessShow(refreigeratorList);
+            backShow(pageStack);
             currentCookIngreShow(currentIngredient);
         }
 
         if(getCurrentPath(pageStack).equals("condimentsPage")){
-            numberlessShow(condiments);
-            backShow(condiments);
+            numberlessShow(condimentsList);
+            backShow(pageStack);
             currentCookIngreShow(currentIngredient);
         }
 
         if(getCurrentPath(pageStack).equals("cookware")){
-            numberlessShow(cookware);
-            backShow(cookware);
+            numberlessShow(cookwaresList);
+            backShow(pageStack);
             currentCookIngreShow(currentIngredient);
         }
 

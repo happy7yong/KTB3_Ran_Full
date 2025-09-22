@@ -4,8 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a819457a-33f3-4a8f-8c71-dff8d042dd6f" name="Changes" comment="feat : 사용하지 않는 주석 제거">
+    <list default="true" id="a819457a-33f3-4a8f-8c71-dff8d042dd6f" name="Changes" comment="refact : 클래스 분리">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ran/EggFry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ran/EggSausageRoll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ran/EggSteam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ran/IngredientComponents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/BreadRecipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ran/BreadRecipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ran/Components.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/Cook.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/EggRecipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ran/EggRecipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ran/Ingredient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ran/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/PathPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ran/PathPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ran/Recipe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,10 +48,14 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/100-hours-a-week/KTB3_Ran_Full.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/happy7yong/KTB3_Ran_Full.git&quot;,
     &quot;accountId&quot;: &quot;e0c064fe-4518-45cf-911d-70ac0191ac26&quot;
   }
 }</component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
@@ -47,27 +64,28 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.week1 [:com.ran.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.week1 [dependencies].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Console&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build week1.executor": "Run",
+    "Gradle.week1 [:com.ran.Main.main()].executor": "Run",
+    "Gradle.week1 [dependencies].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "Console",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
@@ -146,7 +164,13 @@
       <workItem from="1757827501237" duration="6298000" />
       <workItem from="1757834016430" duration="86000" />
       <workItem from="1757834112486" duration="25510000" />
-      <workItem from="1757860776861" duration="374000" />
+      <workItem from="1757860776861" duration="1641000" />
+      <workItem from="1757925415862" duration="4610000" />
+      <workItem from="1757995412790" duration="1922000" />
+      <workItem from="1758112288461" duration="36000" />
+      <workItem from="1758463389140" duration="11570000" />
+      <workItem from="1758498326546" duration="25101000" />
+      <workItem from="1758540458500" duration="12722000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -292,7 +316,31 @@
       <option name="project" value="LOCAL" />
       <updated>1757860441006</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="feat : xml변경">
+      <option name="closed" value="true" />
+      <created>1757861181214</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1757861181214</updated>
+    </task>
+    <task id="LOCAL-00020" summary="feat : 기본적인 스레드 성공">
+      <option name="closed" value="true" />
+      <created>1758481624512</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1758481624512</updated>
+    </task>
+    <task id="LOCAL-00021" summary="refact : 클래스 분리">
+      <option name="closed" value="true" />
+      <created>1758533772243</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1758533772243</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,6 +373,9 @@
     <MESSAGE value="feat : name, 레시피는 불변 및 private으로 변경" />
     <MESSAGE value="feat : 사용하지 않는 boolean 삭제" />
     <MESSAGE value="feat : 사용하지 않는 주석 제거" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : 사용하지 않는 주석 제거" />
+    <MESSAGE value="feat : xml변경" />
+    <MESSAGE value="feat : 기본적인 스레드 성공" />
+    <MESSAGE value="refact : 클래스 분리" />
+    <option name="LAST_COMMIT_MESSAGE" value="refact : 클래스 분리" />
   </component>
 </project>

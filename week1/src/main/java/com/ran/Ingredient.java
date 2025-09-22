@@ -24,6 +24,10 @@ public class Ingredient {
         return ingredientName;
     }
 
+    public String toString(){
+        return ingredientName;
+    }
+
 }
 
 
