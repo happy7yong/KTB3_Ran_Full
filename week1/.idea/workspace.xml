@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a819457a-33f3-4a8f-8c71-dff8d042dd6f" name="Changes" comment="refact : 클래스 분리">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ran/EggFry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ran/EggSausageRoll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ran/EggSteam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ran/IngredientComponents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a819457a-33f3-4a8f-8c71-dff8d042dd6f" name="Changes" comment="refact : Ingredient 자료구조 객체">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/BreadRecipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ran/BreadRecipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ran/Components.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/Cook.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/EggRecipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ran/EggRecipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ran/Ingredient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ran/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/PathPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ran/PathPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ran/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ran/Recipe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +157,7 @@
       <workItem from="1758112288461" duration="36000" />
       <workItem from="1758463389140" duration="11570000" />
       <workItem from="1758498326546" duration="25101000" />
-      <workItem from="1758540458500" duration="12722000" />
+      <workItem from="1758540458500" duration="15280000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -340,7 +327,39 @@
       <option name="project" value="LOCAL" />
       <updated>1758533772243</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="refact : Egg관련 레시피 분리">
+      <option name="closed" value="true" />
+      <created>1758553676261</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1758553676261</updated>
+    </task>
+    <task id="LOCAL-00023" summary="refact : 재료 Components 분리">
+      <option name="closed" value="true" />
+      <created>1758553690970</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1758553690970</updated>
+    </task>
+    <task id="LOCAL-00024" summary="refact : 밀가루 관련 레시피">
+      <option name="closed" value="true" />
+      <created>1758553704875</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1758553704875</updated>
+    </task>
+    <task id="LOCAL-00025" summary="refact : Ingredient 자료구조 객체">
+      <option name="closed" value="true" />
+      <created>1758553905707</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1758553905707</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,6 +395,10 @@
     <MESSAGE value="feat : xml변경" />
     <MESSAGE value="feat : 기본적인 스레드 성공" />
     <MESSAGE value="refact : 클래스 분리" />
-    <option name="LAST_COMMIT_MESSAGE" value="refact : 클래스 분리" />
+    <MESSAGE value="refact : Egg관련 레시피 분리" />
+    <MESSAGE value="refact : 재료 Components 분리" />
+    <MESSAGE value="refact : 밀가루 관련 레시피" />
+    <MESSAGE value="refact : Ingredient 자료구조 객체" />
+    <option name="LAST_COMMIT_MESSAGE" value="refact : Ingredient 자료구조 객체" />
   </component>
 </project>
